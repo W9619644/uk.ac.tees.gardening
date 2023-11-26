@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="models"
+            type="com.example.greenthumb.models.LibraryModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardElevation="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:civ_border_color="#FF000000" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="Description :"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@color/black"
+                            app:layout_constraintLeft_toRightOf="@id/profile_image"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:id="@+id/id_name"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="#757575"
+                            app:layout_constraintLeft_toRightOf="@id/profile_image"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/id_remove"
+                    android:layout_width="@dimen/_20sdp"
+                    android:src="@drawable/baseline_close_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_height="@dimen/_20sdp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

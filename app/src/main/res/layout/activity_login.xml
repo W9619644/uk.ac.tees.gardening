@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".views.login.LoginActivity">
+
+        <com.example.greenthumb.common.PentagonView
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="@dimen/_150sdp"
+            android:rotation="160"
+            android:elevation="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            android:layout_marginLeft="@dimen/_40sdp"
+
+            android:layout_height="@dimen/_100sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+             android:text="Welcome"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_30sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Log in or create your account"
+                 android:textColor="#727272"
+                android:textStyle=""
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:id="@+id/id_username_layout"
+                app:boxBackgroundColor="@color/white"
+                android:hint="@string/username"
+                android:textColorHint="@color/textField_stoke"
+                app:hintTextColor="@color/textField_stoke"
+                app:boxCornerRadiusBottomEnd="@dimen/_30sdp"
+                android:elevation="@dimen/_10sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_30sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_30sdp"
+                app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusTopStart="@dimen/_30sdp"
+                app:boxStrokeColor="@color/whitegrey"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                android:textSize="@dimen/_12sdp"
+                android:id="@+id/id_username"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:id="@+id/id_password_layout0"
+                app:boxCornerRadiusBottomEnd="@dimen/_30sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_30sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_30sdp"
+                app:boxCornerRadiusTopStart="@dimen/_30sdp"
+                app:boxBackgroundColor="@color/white"
+                android:hint="@string/password"
+                android:textColorHint="@color/textField_stoke"
+                app:hintTextColor="@color/textField_stoke"
+                app:boxStrokeColor="#727272"
+                android:elevation="@dimen/_10sdp"
+                app:boxStrokeWidth="1dp"
+
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/id_password"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:id="@+id/id_login"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:rippleColor="@color/whitegrey"
+            app:fabCustomSize="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/id_register"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#252525"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Don't have account?"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:paddingLeft="@dimen/_2sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Sign Up"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

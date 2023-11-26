@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".views.home.HomeActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cardElevation="0dp"
+            android:id="@+id/cardviewss"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+
+
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#FF000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:id="@+id/id_username"
+
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    app:layout_constraintTop_toTopOf="@id/profile_image"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_image"
+                    android:text="Love nature"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:id="@+id/id_logout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    android:layout_height="@dimen/_30sdp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@id/profile_image"
+                    android:background="@color/whitegrey"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_marginLeft="@dimen/_16sdp"
+           android:layout_marginRight="@dimen/_16sdp"
+           android:layout_marginTop="@dimen/_24sdp"
+           android:textSize="@dimen/_20sdp"
+           android:textColor="@color/black"
+           android:id="@+id/id_quote"
+           android:textStyle="bold"
+           android:letterSpacing="0.1"
+           app:layout_constraintTop_toBottomOf="@id/cardviewss"
+           android:text="The garden suggests there might be a place where we can meet nature halfway"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="#727272"
+            android:id="@+id/id_quote2"
+            android:letterSpacing="0.1"
+            app:layout_constraintTop_toBottomOf="@id/id_quote"
+            android:text="Love nature"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:id="@+id/id_shake"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+             android:layout_height="@dimen/_100sdp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+           android:layout_marginTop="@dimen/_50sdp"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/id_quote2"
+            android:layout_height="wrap_content">
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/idPlantLibrary"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:src="@drawable/library"
+                             app:civ_border_color="#FF000000" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Plant Library"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/idPlantTracker"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/tracker"
+                         app:civ_border_color="#FF000000" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Plant Tracker"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/idTips"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/tips"
+                         app:civ_border_color="#FF000000" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Articles"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/idSettings"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/sett"
+                         app:civ_border_color="#FF000000" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Settings"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
