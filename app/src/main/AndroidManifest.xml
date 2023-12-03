@@ -24,6 +24,11 @@
         android:theme="@style/Theme.Gardening"
         tools:targetApi="31">
         <activity
+            android:name="com.example.greenthumb.views.home.HomeActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_home2"
+            android:theme="@style/Theme.Gardening" />
+        <activity
             android:name="com.example.greenthumb.views.library.PlantLibraryActivity2"
             android:exported="false"
             android:label="@string/title_activity_plant_library2"
@@ -46,9 +51,6 @@
             android:exported="false"
             android:label="@string/title_activity_login2"
             android:theme="@style/Theme.Gardening" />
-        <activity
-            android:name="com.example.greenthumb.views.tips.Artciles"
-            android:exported="false" />
         <activity
             android:name="com.example.greenthumb.views.shake.ShakeActivity"
             android:exported="false"
@@ -73,14 +75,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name="com.example.greenthumb.views.setting.SettingsActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name="com.example.greenthumb.views.tracker.PlantTrackerActivity"
             android:exported="false"
@@ -97,30 +92,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name="com.example.greenthumb.views.home.HomeActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenthumb.views.register.RegisterActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenthumb.views.login.LoginActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name="com.example.greenthumb.MainActivity"
             android:exported="true"
