@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Gardening</string>
+    <string name="app_name">GREENTHUMB</string>
     <string name="username">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>

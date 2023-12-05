@@ -62,9 +62,8 @@ class MainActivity : ComponentActivity() {
                     .align(Alignment.Start)
                 //.padding(end = 8.dp) // Adjust the padding as needed
             )
-
             Text(
-                text = "GARDENING",
+                text = "GREENTHUMB",
                 fontSize = 40.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(android.graphics.Color.parseColor("#378805")),
