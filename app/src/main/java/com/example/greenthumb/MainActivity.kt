@@ -1,6 +1,5 @@
 package com.example.greenthumb
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,9 +18,7 @@ import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.gardening.R
 import com.example.greenthumb.common.navigateActivity
-import com.example.greenthumb.views.login.LoginActivity
 import com.example.greenthumb.views.login.LoginActivity2
 import com.example.greenthumb.views.setting.ui.theme.GardeningTheme
 import java.util.*

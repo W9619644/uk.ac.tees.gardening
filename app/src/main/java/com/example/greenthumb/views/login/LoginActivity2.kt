@@ -16,40 +16,29 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.*
 import androidx.compose.ui.unit.sp
 import com.example.gardening.R
-import com.example.gardening.databinding.ActivityLoginBinding
 import com.example.greenthumb.common.isInternetConnected
 import com.example.greenthumb.common.navigateActivity
-import com.example.greenthumb.views.home.HomeActivity
 import com.example.greenthumb.views.login.ui.theme.GardeningTheme
 
 import android.Manifest
 import android.app.ProgressDialog
 import android.content.pm.PackageManager
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.compose.foundation.clickable
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.Observer
-import com.example.greenthumb.common.isInternetConnected
-import com.example.greenthumb.common.navigateActivity
+import com.example.greenthumb.views.home.HomeActivity2
 
-import com.example.greenthumb.views.register.RegisterActivity
 import com.example.greenthumb.views.register.RegisterActivity2
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity2 : ComponentActivity() {
-    lateinit var binding : ActivityLoginBinding
     private val loginViewModel: LoginViewModel by viewModels()
     lateinit var dialog : ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,7 +72,7 @@ class LoginActivity2 : ComponentActivity() {
 
         loginViewModel.isSuccess.observe(this@LoginActivity2 , Observer {
             if(it){
-                navigateActivity(this@LoginActivity2, HomeActivity::class.java)
+                navigateActivity(this@LoginActivity2, HomeActivity2::class.java)
                 // finish()
             }
         })
@@ -92,15 +81,6 @@ class LoginActivity2 : ComponentActivity() {
             Toast.makeText(this@LoginActivity2 , ""+it, Toast.LENGTH_SHORT).show()
         })
 
-        loginViewModel.emailmessage.observe(this@LoginActivity2 , Observer {
-            binding.idUsernameLayout.error="Enter Email ID"
-            binding.idUsernameLayout.isErrorEnabled = true
-        })
-        loginViewModel.passmessage.observe(this@LoginActivity2 , Observer {
-            binding.idPasswordLayout0.error="Enter valid Password"
-            binding.idPasswordLayout0.isErrorEnabled = true
-
-        })
 
 
     }
@@ -123,7 +103,7 @@ class LoginActivity2 : ComponentActivity() {
 
         val user= FirebaseAuth.getInstance().currentUser
         if(user!=null){
-            navigateActivity(this@LoginActivity2, HomeActivity::class.java)
+            navigateActivity(this@LoginActivity2, HomeActivity2::class.java)
         }
     }
 

@@ -25,8 +25,8 @@ import androidx.lifecycle.Observer
 import androidx.work.*
 import com.example.gardening.databinding.ActivityUploadPlantBinding
 import com.example.greenthumb.common.isInternetConnected
+import com.example.greenthumb.views.setting.SettingActivity2
 
-import com.example.greenthumb.views.setting.SettingsActivity
 import com.example.greenthumb.workmanager.CustomBroadcast
 import com.example.greenthumb.workmanager.NotificationWorker
 import java.io.File
@@ -75,7 +75,7 @@ class UploadPlantActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.CAMERA),
-                    SettingsActivity.CAMERA_PERMISSION_REQUEST_CODE
+                    SettingActivity2.CAMERA_PERMISSION_REQUEST_CODE
                 )
             } else {
                 // Permission already granted, proceed with camera operations
@@ -283,8 +283,8 @@ class UploadPlantActivity : AppCompatActivity() {
                 }
             }
 
-            SettingsActivity.CAMERA_PERMISSION_REQUEST_CODE -> {
-                if (requestCode == SettingsActivity.CAMERA_PERMISSION_REQUEST_CODE) {
+            SettingActivity2.CAMERA_PERMISSION_REQUEST_CODE -> {
+                if (requestCode == SettingActivity2.CAMERA_PERMISSION_REQUEST_CODE) {
                     if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                         // Camera permission granted, proceed with camera operations
                         takePicture()

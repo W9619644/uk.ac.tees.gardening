@@ -27,7 +27,7 @@ import com.example.gardening.R
 import com.example.greenthumb.common.isInternetConnected
 import com.example.greenthumb.common.navigateActivity
 import com.example.greenthumb.models.RegisterModel
-import com.example.greenthumb.views.home.HomeActivity
+import com.example.greenthumb.views.home.HomeActivity2
 import com.example.greenthumb.views.login.LoginActivity2
 import com.example.greenthumb.views.register.ui.theme.GardeningTheme
 
@@ -49,7 +49,7 @@ class RegisterActivity2 : ComponentActivity() {
 
 
         registerViewModel.isSuccess.observe(this@RegisterActivity2 , Observer {
-            navigateActivity(this@RegisterActivity2, HomeActivity::class.java)
+            navigateActivity(this@RegisterActivity2, HomeActivity2::class.java)
             //finish()
         })
 

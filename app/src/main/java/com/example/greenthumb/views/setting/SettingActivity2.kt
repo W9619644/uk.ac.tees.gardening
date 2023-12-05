@@ -32,7 +32,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.gardening.R
-import com.example.gardening.databinding.ActivitySettingsBinding
 import com.example.greenthumb.common.isInternetConnected
 import com.example.greenthumb.views.setting.ui.theme.GardeningTheme
 import java.io.File
@@ -44,7 +43,6 @@ class SettingActivity2 : ComponentActivity() {
 
     private val settingsViewModel: SettingsViewModel by viewModels()
 
-    lateinit var binding: ActivitySettingsBinding
     private val PERMISSION_GALLERY_CODE = 2222
     private val LOAD_IMAGE_RESULTS = 3333
     private var imgPic: String = ""
@@ -133,7 +131,7 @@ class SettingActivity2 : ComponentActivity() {
                             ActivityCompat.requestPermissions(
                                 this@SettingActivity2,
                                 arrayOf(Manifest.permission.CAMERA),
-                                SettingsActivity.CAMERA_PERMISSION_REQUEST_CODE
+                                SettingActivity2.CAMERA_PERMISSION_REQUEST_CODE
                             )
                         } else {
                             // Permission already granted, proceed with camera operations
